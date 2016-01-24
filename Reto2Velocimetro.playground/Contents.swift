@@ -2,11 +2,6 @@
 
 import UIKit
 
-/*
-
-*/
-
-
 //Creando enum
 
 enum Velocidades : Int {
