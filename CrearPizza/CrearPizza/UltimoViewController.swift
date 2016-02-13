@@ -2,7 +2,7 @@
 //  UltimoViewController.swift
 //  CrearPizza
 //
-//  Created by DIANIS on 8/02/16.
+//  Created by Gonzalo on 8/02/16.
 //  Copyright © 2016 G. All rights reserved.
 //
 
