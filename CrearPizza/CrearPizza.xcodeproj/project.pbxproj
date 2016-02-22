@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2018B4161C7AD12500E6345C /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018B4151C7AD12500E6345C /* IngredientsTableViewCell.swift */; };
 		2095F2611C794DC300139DFC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F2601C794DC300139DFC /* InterfaceController.swift */; };
 		2095F2631C794DC300139DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2095F2621C794DC300139DFC /* Assets.xcassets */; };
 		2095F2681C794DC300139DFC /* CrearPizza WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2095F2671C794DC300139DFC /* CrearPizza WatchKit 1 App.app */; };
 		2095F26E1C794DC300139DFC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2095F26C1C794DC300139DFC /* Interface.storyboard */; };
 		2095F2701C794DC300139DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2095F26F1C794DC300139DFC /* Assets.xcassets */; };
 		2095F2741C794DC300139DFC /* CrearPizza WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2095F25E1C794DC300139DFC /* CrearPizza WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2095F27D1C7963BA00139DFC /* SizePizzaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F27C1C7963B900139DFC /* SizePizzaInterfaceController.swift */; };
+		2095F27F1C7963DD00139DFC /* MassPizzaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F27E1C7963DD00139DFC /* MassPizzaInterfaceController.swift */; };
+		2095F2811C79640500139DFC /* CheeseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F2801C79640500139DFC /* CheeseInterfaceController.swift */; };
+		2095F2831C79642700139DFC /* IngridientsPizzaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F2821C79642700139DFC /* IngridientsPizzaInterfaceController.swift */; };
+		2095F2851C79644700139DFC /* ResumePizzaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F2841C79644700139DFC /* ResumePizzaInterfaceController.swift */; };
+		2095F2871C79696B00139DFC /* PIzzaAW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F2861C79696A00139DFC /* PIzzaAW.swift */; };
 		20A8945F1C6F92C4005B4571 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8945E1C6F92C4005B4571 /* Pizza.swift */; };
+		20E4494C1C7BA49900190421 /* FinishInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4494B1C7BA49900190421 /* FinishInterfaceController.swift */; };
 		20ECC3A01C696BA000DD60E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECC39F1C696BA000DD60E9 /* AppDelegate.swift */; };
 		20ECC3A21C696BA000DD60E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECC3A11C696BA000DD60E9 /* ViewController.swift */; };
 		20ECC3A51C696BA000DD60E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20ECC3A31C696BA000DD60E9 /* Main.storyboard */; };
@@ -57,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2018B4151C7AD12500E6345C /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		2095F25E1C794DC300139DFC /* CrearPizza WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CrearPizza WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2095F2601C794DC300139DFC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		2095F2621C794DC300139DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +74,14 @@
 		2095F26D1C794DC300139DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2095F26F1C794DC300139DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2095F2711C794DC300139DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2095F27C1C7963B900139DFC /* SizePizzaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePizzaInterfaceController.swift; sourceTree = "<group>"; };
+		2095F27E1C7963DD00139DFC /* MassPizzaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassPizzaInterfaceController.swift; sourceTree = "<group>"; };
+		2095F2801C79640500139DFC /* CheeseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseInterfaceController.swift; sourceTree = "<group>"; };
+		2095F2821C79642700139DFC /* IngridientsPizzaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngridientsPizzaInterfaceController.swift; sourceTree = "<group>"; };
+		2095F2841C79644700139DFC /* ResumePizzaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumePizzaInterfaceController.swift; sourceTree = "<group>"; };
+		2095F2861C79696A00139DFC /* PIzzaAW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIzzaAW.swift; sourceTree = "<group>"; };
 		20A8945E1C6F92C4005B4571 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		20E4494B1C7BA49900190421 /* FinishInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishInterfaceController.swift; sourceTree = "<group>"; };
 		20ECC39C1C696BA000DD60E9 /* CrearPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrearPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20ECC39F1C696BA000DD60E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20ECC3A11C696BA000DD60E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +117,16 @@
 			isa = PBXGroup;
 			children = (
 				2095F2601C794DC300139DFC /* InterfaceController.swift */,
+				2095F27C1C7963B900139DFC /* SizePizzaInterfaceController.swift */,
+				2095F27E1C7963DD00139DFC /* MassPizzaInterfaceController.swift */,
+				2095F2801C79640500139DFC /* CheeseInterfaceController.swift */,
+				2095F2821C79642700139DFC /* IngridientsPizzaInterfaceController.swift */,
+				2095F2841C79644700139DFC /* ResumePizzaInterfaceController.swift */,
 				2095F2621C794DC300139DFC /* Assets.xcassets */,
 				2095F2641C794DC300139DFC /* Info.plist */,
+				2095F2861C79696A00139DFC /* PIzzaAW.swift */,
+				2018B4151C7AD12500E6345C /* IngredientsTableViewCell.swift */,
+				20E4494B1C7BA49900190421 /* FinishInterfaceController.swift */,
 			);
 			path = "CrearPizza WatchKit 1 Extension";
 			sourceTree = "<group>";
@@ -295,7 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2018B4161C7AD12500E6345C /* IngredientsTableViewCell.swift in Sources */,
+				2095F2831C79642700139DFC /* IngridientsPizzaInterfaceController.swift in Sources */,
+				2095F2871C79696B00139DFC /* PIzzaAW.swift in Sources */,
+				2095F2851C79644700139DFC /* ResumePizzaInterfaceController.swift in Sources */,
+				2095F2811C79640500139DFC /* CheeseInterfaceController.swift in Sources */,
+				2095F27F1C7963DD00139DFC /* MassPizzaInterfaceController.swift in Sources */,
 				2095F2611C794DC300139DFC /* InterfaceController.swift in Sources */,
+				2095F27D1C7963BA00139DFC /* SizePizzaInterfaceController.swift in Sources */,
+				20E4494C1C7BA49900190421 /* FinishInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +557,7 @@
 				2095F2781C794DC300139DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2095F27A1C794DC300139DFC /* Build configuration list for PBXNativeTarget "CrearPizza WatchKit 1 Extension" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +566,7 @@
 				2095F2761C794DC300139DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20ECC3971C696BA000DD60E9 /* Build configuration list for PBXProject "CrearPizza" */ = {
 			isa = XCConfigurationList;

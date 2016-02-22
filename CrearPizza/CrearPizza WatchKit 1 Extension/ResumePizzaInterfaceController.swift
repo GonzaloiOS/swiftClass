@@ -1,6 +1,6 @@
 //
-//  InterfaceController.swift
-//  CrearPizza WatchKit 1 Extension
+//  ResumePizzaInterfaceController.swift
+//  CrearPizza
 //
 //  Created by DIANIS on 20/02/16.
 //  Copyright © 2016 G. All rights reserved.
@@ -10,12 +10,19 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
-
+class ResumePizzaInterfaceController: WKInterfaceController {
+    
+    
+    @IBOutlet var resumeLabel: WKInterfaceLabel!
+    var pizza:PIzzaAW?
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        pizza = context as? PIzzaAW
+        
+        self.resumeLabel.setText((pizza?.size)! + ","+(pizza?.mass)! + ","+(pizza?.cheese)! + ","+(pizza?.ingredients)! + ",")
     }
 
     override func willActivate() {
@@ -28,9 +35,9 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    
-    @IBAction func goToSizeButton() {
-        pushControllerWithName("SizePizzaInterfaceController", context: nil)
+    @IBAction func confirmPizza() {
+        
+        pushControllerWithName(<#T##name: String##String#>, context: <#T##AnyObject?#>)
     }
 
 }

@@ -1,8 +1,8 @@
 //
-//  InterfaceController.swift
-//  CrearPizza WatchKit 1 Extension
+//  FinishInterfaceController.swift
+//  CrearPizza
 //
-//  Created by DIANIS on 20/02/16.
+//  Created by DIANIS on 22/02/16.
 //  Copyright © 2016 G. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class FinishInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -26,11 +26,6 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-    
-    
-    @IBAction func goToSizeButton() {
-        pushControllerWithName("SizePizzaInterfaceController", context: nil)
     }
 
 }

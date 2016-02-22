@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
@@ -10,64 +10,159 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CrearPizza_WatchKit_1_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="101.5" alignment="left" text="Bienvenido. Esta app creará una pizza según los ingredientes que escojas." textAlignment="center" numberOfLines="0" id="ngB-xu-v7G"/>
-                        <button width="1" alignment="left" title="Siguiente" id="3fY-FL-JYT"/>
+                        <label width="136" height="101.5" alignment="left" text="Bienvenido. Esta app creará una pizza según tus gustos." textAlignment="center" numberOfLines="0" id="ngB-xu-v7G"/>
+                        <button width="1" alignment="left" title="Siguiente" id="3fY-FL-JYT">
+                            <connections>
+                                <action selector="goToSizeButton" destination="AgC-eL-Hgc" id="l3p-bn-ipz"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="201" y="273"/>
         </scene>
-        <!--Interface Controller-->
+        <!--SizePizzaInterfaceController-->
         <scene sceneID="JtV-5B-wZm">
             <objects>
-                <controller id="s57-om-FID">
+                <controller identifier="SizePizzaInterfaceController" id="s57-om-FID" customClass="SizePizzaInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" height="38.5" alignment="left" text="Escoje tamaño de Pizza:" textAlignment="left" numberOfLines="2" id="SUC-2c-zdn"/>
                         <label width="136" alignment="left" text="Grande" textAlignment="center" id="FC7-91-9XX"/>
-                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="3" id="ZLM-Wc-dGN"/>
-                        <button width="1" alignment="left" title="Siguiente" id="DoI-ub-tvo"/>
+                        <slider width="1" alignment="left" maximum="2" steps="2" id="ZLM-Wc-dGN">
+                            <connections>
+                                <action selector="sizeSlider:" destination="s57-om-FID" id="CMb-uL-eLU"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente" id="DoI-ub-tvo">
+                            <connections>
+                                <action selector="nextMassButton" destination="s57-om-FID" id="JGP-Ue-5Qy"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="sizeLabel" destination="FC7-91-9XX" id="6cD-WC-o36"/>
+                        <outlet property="sliderOutlet" destination="ZLM-Wc-dGN" id="aGG-pa-b1G"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="348" y="273"/>
+            <point key="canvasLocation" x="354" y="273"/>
         </scene>
-        <!--Interface Controller-->
+        <!--MassPizzaInterfaceController-->
         <scene sceneID="sqn-ZY-aK0">
             <objects>
-                <controller id="ywj-or-Ko1">
+                <controller identifier="MassPizzaInterfaceController" id="ywj-or-Ko1" customClass="MassPizzaInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" alignment="left" text="Escoje tipo de masa:" numberOfLines="0" id="Bxn-Xc-J9z"/>
                         <label width="136" alignment="left" text="Delgada" textAlignment="center" id="l19-a9-PxY"/>
-                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="3" id="OTd-9k-ONg"/>
-                        <button width="1" alignment="left" title="Button" id="UNk-ax-cDv"/>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="2" steps="2" id="OTd-9k-ONg">
+                            <connections>
+                                <action selector="massSlider:" destination="ywj-or-Ko1" id="cwl-3a-Scw"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente" id="UNk-ax-cDv">
+                            <connections>
+                                <action selector="goToCheese" destination="ywj-or-Ko1" id="ouh-Q0-7Hc"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="massLabel" destination="l19-a9-PxY" id="SrO-un-R2w"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="509" y="272"/>
         </scene>
-        <!--Interface Controller-->
+        <!--CheeseInterfaceController-->
         <scene sceneID="6Y6-lV-uW9">
             <objects>
-                <controller id="eIs-Q7-kZ4">
+                <controller identifier="CheeseInterfaceController" id="eIs-Q7-kZ4" customClass="CheeseInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" alignment="left" text="Escoje el tipo de queso:" numberOfLines="0" id="FBR-m8-RSC"/>
                         <label width="136" alignment="left" text="Sin Queso" textAlignment="center" id="bFo-tG-J1v"/>
-                        <slider width="1" alignment="left" value="1" maximum="4" steps="4" id="Zrq-uL-c1V"/>
-                        <button width="1" alignment="left" title="Button" id="Jow-zd-aFX"/>
+                        <slider width="1" alignment="left" maximum="3" steps="3" id="Zrq-uL-c1V">
+                            <connections>
+                                <action selector="cheeseSlider:" destination="eIs-Q7-kZ4" id="tcD-NJ-coo"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente" id="Jow-zd-aFX">
+                            <connections>
+                                <action selector="goToIngridients" destination="eIs-Q7-kZ4" id="zqC-Zl-mq8"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="chesseLabel" destination="bFo-tG-J1v" id="oIA-MO-NRD"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="667" y="273"/>
         </scene>
-        <!--Interface Controller-->
+        <!--IngridientsPizzaInterfaceController-->
         <scene sceneID="tky-1g-lvu">
             <objects>
-                <controller id="DMg-sQ-RZd">
+                <controller identifier="IngridientsPizzaInterfaceController" id="DMg-sQ-RZd" customClass="IngridientsPizzaInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" alignment="left" text="Escoje Ingredientes:" textAlignment="left" numberOfLines="0" id="G6E-FY-HCU"/>
+                        <table alignment="left" id="L4O-ja-9sR">
+                            <items>
+                                <tableRow identifier="IngredientsTableViewCell" id="TUq-Jy-JgN" customClass="IngredientsTableViewCell" customModule="CrearPizza_WatchKit_1_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="1yK-je-muk">
+                                        <items>
+                                            <label width="88.5" height="30.5" alignment="left" text="Label" id="mk1-0h-O7X"/>
+                                            <imageView width="0.29999999999999999" height="1" alignment="left" id="74A-PK-cei"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredientNameLabel" destination="mk1-0h-O7X" id="yYg-PT-2LD"/>
+                                        <outlet property="selectImageView" destination="74A-PK-cei" id="ae3-My-kuJ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="Uk7-3z-d81"/>
+                        <button width="1" alignment="left" title="Siguiente" id="8Jn-xR-a0z">
+                            <connections>
+                                <action selector="goToResume" destination="DMg-sQ-RZd" id="LgQ-aa-DCH"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="L4O-ja-9sR" id="Tbb-kh-S9J"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="826" y="273"/>
+        </scene>
+        <!--ResumePizzaInterfaceController-->
+        <scene sceneID="gTw-Nv-KlF">
+            <objects>
+                <controller identifier="ResumePizzaInterfaceController" id="bRk-xq-hi1" customClass="ResumePizzaInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Resumen" textAlignment="center" id="FMx-Zv-0CR"/>
+                        <label width="136" height="88.5" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="RBO-Fq-gPB"/>
+                        <button width="1" alignment="left" title="Confirmar Pizza" id="7p2-hs-bcr">
+                            <connections>
+                                <action selector="confirmPizza" destination="bRk-xq-hi1" id="7cB-nh-VfU"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="resumeLabel" destination="RBO-Fq-gPB" id="BNK-mF-7PR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="987" y="271"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pbK-m0-IHP">
+            <objects>
+                <controller id="UoC-qj-jmf">
+                    <items>
+                        <label width="136" height="107.5" alignment="left" text="Gracias por tu visita, la pizza ha sido ordenada " textAlignment="center" numberOfLines="0" id="M7q-tZ-X2i"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1147" y="272"/>
         </scene>
     </scenes>
 </document>
