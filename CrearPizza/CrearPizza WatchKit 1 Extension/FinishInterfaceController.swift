@@ -2,7 +2,7 @@
 //  FinishInterfaceController.swift
 //  CrearPizza
 //
-//  Created by DIANIS on 22/02/16.
+//  Created by Gonzalo on 22/02/16.
 //  Copyright © 2016 G. All rights reserved.
 //
 

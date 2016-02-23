@@ -127,6 +127,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="nextButton" destination="8Jn-xR-a0z" id="UAI-4g-Nkz"/>
                         <outlet property="tableView" destination="L4O-ja-9sR" id="Tbb-kh-S9J"/>
                     </connections>
                 </controller>
@@ -139,8 +140,8 @@
                 <controller identifier="ResumePizzaInterfaceController" id="bRk-xq-hi1" customClass="ResumePizzaInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" alignment="left" text="Resumen" textAlignment="center" id="FMx-Zv-0CR"/>
-                        <label width="136" height="88.5" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="RBO-Fq-gPB"/>
-                        <button width="1" alignment="left" title="Confirmar Pizza" id="7p2-hs-bcr">
+                        <label width="136" height="95.5" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="RBO-Fq-gPB"/>
+                        <button width="1" height="27.5" alignment="left" title="Confirmar Pizza" id="7p2-hs-bcr">
                             <connections>
                                 <action selector="confirmPizza" destination="bRk-xq-hi1" id="7cB-nh-VfU"/>
                             </connections>
@@ -151,12 +152,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="987" y="271"/>
+            <point key="canvasLocation" x="990" y="273"/>
         </scene>
-        <!--Interface Controller-->
+        <!--FinishInterfaceController-->
         <scene sceneID="pbK-m0-IHP">
             <objects>
-                <controller id="UoC-qj-jmf">
+                <controller identifier="FinishInterfaceController" id="UoC-qj-jmf" customClass="FinishInterfaceController" customModule="CrearPizza_WatchKit_1_Extension">
                     <items>
                         <label width="136" height="107.5" alignment="left" text="Gracias por tu visita, la pizza ha sido ordenada " textAlignment="center" numberOfLines="0" id="M7q-tZ-X2i"/>
                     </items>

@@ -2,7 +2,7 @@
 //  IngridientsPizzaInterfaceController.swift
 //  CrearPizza
 //
-//  Created by DIANIS on 20/02/16.
+//  Created by Gonzalo on 20/02/16.
 //  Copyright © 2016 G. All rights reserved.
 //
 
@@ -13,6 +13,10 @@ import Foundation
 class IngridientsPizzaInterfaceController: WKInterfaceController {
     
     @IBOutlet var tableView: WKInterfaceTable!
+    
+    
+    @IBOutlet var nextButton: WKInterfaceButton!
+    
     let ingredients:[String] = ["jamón","pepperoni","pavo","salchicha","aceituna","cebolla","pimiento","piña","anchoa"]
     
     var selectedIngredientsDictionary = ["":""]
@@ -26,6 +30,10 @@ class IngridientsPizzaInterfaceController: WKInterfaceController {
         
         pizza =  context as? PIzzaAW
         self.loadDataToTableView()
+        
+        self.nextButton.setTitle("Escoje una")
+        self.nextButton.setEnabled(false)
+        
     }
 
     override func willActivate() {
@@ -50,11 +58,11 @@ class IngridientsPizzaInterfaceController: WKInterfaceController {
                 
                 if(self.selectedIngredientsDictionary[String(k)] != nil){
                     
-                    row.selectImageView.setImage(UIImage(named: "r4"))
+                    row.selectImageView.setImage(UIImage(named: "r2"))
                     
                 }else{
                     
-                    row.selectImageView.setImage(UIImage(named: "r3"))
+                    row.selectImageView.setImage(UIImage(named: "r1"))
                     
                 }
             }
@@ -73,7 +81,7 @@ class IngridientsPizzaInterfaceController: WKInterfaceController {
             
             if let row = self.tableView.rowControllerAtIndex(rowIndex) as? IngredientsTableViewCell {
                 
-                row.selectImageView.setImage(UIImage(named: "r3"))
+                row.selectImageView.setImage(UIImage(named: "r1"))
                 
             }
             
@@ -83,10 +91,22 @@ class IngridientsPizzaInterfaceController: WKInterfaceController {
             
             if let row = self.tableView.rowControllerAtIndex(rowIndex) as? IngredientsTableViewCell {
                 
-                row.selectImageView.setImage(UIImage(named: "r4"))
+                row.selectImageView.setImage(UIImage(named: "r2"))
                 
             }
             
+        }
+        
+        if(self.selectedIngredientsDictionary.count > 1){
+            
+            self.nextButton.setTitle("Siguiente")
+            self.nextButton.setEnabled(true)
+            
+        }else{
+            
+            self.nextButton.setTitle("Escoje una")
+            self.nextButton.setEnabled(false)
+            self.loadDataToTableView()
         }
         
     }
@@ -98,7 +118,7 @@ class IngridientsPizzaInterfaceController: WKInterfaceController {
         
         for a in self.selectedIngredientsDictionary.values {
             
-            auxIngredients += a + ", "
+            auxIngredients += a + " "
         }
         print(auxIngredients)
         

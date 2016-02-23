@@ -2,7 +2,7 @@
 //  ResumePizzaInterfaceController.swift
 //  CrearPizza
 //
-//  Created by DIANIS on 20/02/16.
+//  Created by Gonzalo on 20/02/16.
 //  Copyright © 2016 G. All rights reserved.
 //
 
@@ -22,7 +22,7 @@ class ResumePizzaInterfaceController: WKInterfaceController {
         // Configure interface objects here.
         pizza = context as? PIzzaAW
         
-        self.resumeLabel.setText((pizza?.size)! + ","+(pizza?.mass)! + ","+(pizza?.cheese)! + ","+(pizza?.ingredients)! + ",")
+        self.resumeLabel.setText((pizza?.size)! + " "+(pizza?.mass)! + " "+(pizza?.cheese)! + " "+(pizza?.ingredients)! + " ")
     }
 
     override func willActivate() {
@@ -37,7 +37,7 @@ class ResumePizzaInterfaceController: WKInterfaceController {
     
     @IBAction func confirmPizza() {
         
-        pushControllerWithName(<#T##name: String##String#>, context: <#T##AnyObject?#>)
+        pushControllerWithName("FinishInterfaceController", context: nil)
     }
 
 }
